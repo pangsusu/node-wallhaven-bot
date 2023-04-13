@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "bot.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "/bot.js"
+    }
+  ],
+  "env": {
+    "TOKEN": "bot_token",
+    "API_WALLHAVEN": "wallhaven_api",
+    "AUTH_USERS": "[123, 456]",
+    "AUTH_CHATS": "[123, 456]"
+  },
+  "installConfig": {
+    "ignore": [
+      "example_config.js",
+      "test",
+      "LICENSE",
+      "README.md"
+    ],
+    "includeFiles": [
+      "ping/ping.js"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "node-telegram-bot-api": "^0.56.0"
+  }
+}
