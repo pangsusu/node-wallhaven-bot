@@ -43,3 +43,5 @@ Fill up all the fields. Meaning of each fields are discussed below:
 # Deploying
 * Start the bot by using this command :
 `npm start`
+# Changelogs
+- add Dockerfile & Bulid images push Docker Hub
